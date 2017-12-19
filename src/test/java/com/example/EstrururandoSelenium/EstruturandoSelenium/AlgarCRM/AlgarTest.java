@@ -32,6 +32,6 @@ public class AlgarTest {
 
     private void userPageLoginAlgar(){
         pageLoginAlgar = new PageLoginAlgar(PageAlgar.getDriver());
-        pageLoginAlgar.loginPage("consult_vendas_1","ctbc2014@");
+        pageLoginAlgar.loginPage("","");
     }
 }
