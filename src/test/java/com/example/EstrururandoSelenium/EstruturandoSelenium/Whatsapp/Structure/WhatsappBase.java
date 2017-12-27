@@ -19,15 +19,16 @@ public class WhatsappBase {
     }
 
     public WhatsappBase(){
-        executChrome();
+//        executChrome(); Utilizar o selnium grid
         ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("user-data-dir=~/WhatsappTest/chromeDriver/chromeDriver");
         chromeOptions.addArguments("disable-infobars");
         driver = new ChromeDriver(chromeOptions);
     }
 
     public void navegateTO(String url){
         driver.get(url);
-        driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
 
